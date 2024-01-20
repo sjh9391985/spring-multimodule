@@ -7,6 +7,7 @@ import dev.be.modulecommon.repository.MemberRepository;
 import dev.be.modulecommon.service.CommonDemoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -14,7 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoService {
 
-    private final CommonDemoService commonDemoService;
+    @Value("${profile-name}")
+    private String name;
 
     private final MemberRepository memberRepository;
     public String save(){
