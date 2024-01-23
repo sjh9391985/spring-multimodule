@@ -29,4 +29,11 @@ public class AsyncController {
         return "success";
     }
 
+    @GetMapping("/get")
+    public String getController() {
+        return "get";
+    }
+
+
+
 }
