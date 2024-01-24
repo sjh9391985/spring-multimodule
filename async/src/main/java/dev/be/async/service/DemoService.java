@@ -18,4 +18,10 @@ public class DemoService {
         return "get";
     }
 
+    public String post() {
+        BaseRequestInfo baseRequestInfo = BaseRequestInfo.
+        ResponseEntity<BaseResponseInfo> response = demoFeignClient.callPost("CustomHeader", "CustomName", 1L);
+        return "post";
+    }
+
 }
