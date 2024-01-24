@@ -23,6 +23,7 @@ repositories {
 
 ext {
     set("springCloudVersion", "2021.0.4")
+    set("commonsLangVersion", "3.12.0")
 }
 
 dependencyManagement {
@@ -39,6 +40,9 @@ dependencies {
 
     // Feign
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    // String Utils
+    implementation 'org.apache.commons:commons-lang3:${commonsLangVersion}'
 }
 
 tasks.named('test') {
