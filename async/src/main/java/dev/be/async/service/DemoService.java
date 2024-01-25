@@ -23,5 +23,9 @@ public class DemoService {
         ResponseEntity<BaseResponseInfo> response = demoFeignClient.callPost("CustomHeader", "CustomName", 1L);
         return "post";
     }
+    public String errorDecoder() {
+        demoFeignClient.callErrorDecoder();
+        return "error";
+    }
 
 }

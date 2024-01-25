@@ -24,6 +24,11 @@ public class DemoController {
         return "get";
     }
 
+    @PostMapping("/error")
+    public String errorDecoderController() {
+        return demoService.errorDecoder();
+    }
+
 
 
 }
